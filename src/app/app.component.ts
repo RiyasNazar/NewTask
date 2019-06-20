@@ -61,11 +61,8 @@ import { of } from 'rxjs';
 // './app.component.html',
 
 export class AppComponent implements OnInit {
-
     students: Student[] = [];
-
     constructor(private studentservice: StudentService) {}
-
     ngOnInit() {
         const studentsObservable = this.studentservice.getStudents();
         studentsObservable.subscribe((studentsData: Student[]) => {
